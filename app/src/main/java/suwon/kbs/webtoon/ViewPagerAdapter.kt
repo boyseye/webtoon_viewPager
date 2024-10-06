@@ -11,13 +11,13 @@ class ViewPagerAdapter(private val mainActivity: MainActivity) : FragmentStateAd
     override fun createFragment(position: Int): Fragment {
         return when (position){
             0 -> {
-                return AFragment();
+                return AFragment(position);
             }
             1 -> {
-                return BFragment();
+                return AFragment(position);
             }
             else -> {
-                return AFragment();
+                return AFragment(position);
             }
         }
     }
